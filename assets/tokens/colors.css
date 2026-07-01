@@ -1,0 +1,62 @@
+/* Escentie color system — warm, earthy, premium.
+   Three brand pillars from the guideline plus a derived working scale.
+   Cream/Warm Beige #F5EBE0 · Deep Chocolate Brown #3D261A · Gold/Mustard Yellow #D4A373 */
+:root {
+  /* ---- Brand core (canonical, do not alter) ---- */
+  --escentie-cream: #F5EBE0;      /* Cream / Warm Beige — primary background */
+  --escentie-brown: #3D261A;      /* Deep Chocolate Brown — text & line art (the brand's "black") */
+  --escentie-gold:  #D4A373;      /* Gold / Mustard Yellow — accent / highlight */
+
+  /* ---- Cream / paper scale (warm neutrals) ---- */
+  --cream-50:  #FBF6EF;   /* lightest paper */
+  --cream-100: #F8F1E8;
+  --cream-200: #F5EBE0;   /* = brand cream */
+  --cream-300: #ECDFCF;
+  --cream-400: #E2D0BB;   /* sand / divider on cream */
+  --cream-500: #D8C2A8;
+
+  /* ---- Gold scale ---- */
+  --gold-300: #E3C29C;
+  --gold-400: #D9B083;
+  --gold-500: #D4A373;   /* = brand gold */
+  --gold-600: #C18F5C;   /* hover / pressed gold */
+  --gold-700: #A8784A;   /* gold text on cream (AA) */
+
+  /* ---- Brown scale ---- */
+  --brown-900: #2A1A11;  /* deepest */
+  --brown-800: #3D261A;  /* = brand brown */
+  --brown-700: #4E3325;
+  --brown-600: #66493A;
+  --brown-500: #846656;  /* muted brown — secondary text */
+  --brown-400: #A98F7E;  /* tertiary / disabled text */
+
+  /* ---- Supporting botanical tone (line-art flora, tea/leaf accents) ---- */
+  --sage-500: #8C8B6A;   /* muted olive — sparing botanical accent */
+  --sage-600: #73734F;
+
+  /* ---- Semantic surfaces ---- */
+  --surface-page:    var(--cream-200);   /* default page background */
+  --surface-raised:  var(--cream-50);    /* cards, sheets sitting on the page */
+  --surface-sunken:  var(--cream-300);   /* wells, inset fields */
+  --surface-inverse: var(--brown-800);   /* dark sections, footers */
+  --surface-accent:  var(--gold-500);    /* highlight blocks */
+
+  /* ---- Semantic text ---- */
+  --text-primary:   var(--brown-800);   /* body & headings on light */
+  --text-secondary: var(--brown-500);   /* supporting copy */
+  --text-tertiary:  var(--brown-400);   /* captions, meta */
+  --text-accent:    var(--gold-700);    /* gold text that must stay legible on cream */
+  --text-on-dark:   var(--cream-200);   /* text on brown surfaces */
+  --text-on-gold:   var(--brown-800);   /* text on gold surfaces */
+
+  /* ---- Borders & lines ---- */
+  --border-hairline: rgba(61, 38, 26, 0.14);  /* thin brown line on cream */
+  --border-soft:     rgba(61, 38, 26, 0.24);
+  --border-strong:   var(--brown-800);
+  --border-gold:     var(--gold-500);
+
+  /* ---- Functional / status (kept warm, used sparingly) ---- */
+  --status-success: #6E7B4E;
+  --status-error:   #A6483A;
+  --status-info:    var(--brown-600);
+}
