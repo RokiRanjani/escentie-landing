@@ -109,7 +109,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: var(--weight-bold); li
 @media (max-width: 760px) { .nav__links .nav-link { display: none; } }
 
 /* ---------------- HERO (video) ---------------- */
-.hero { position: relative; min-height: 100vh; overflow: hidden; display: flex; align-items: center; background: #170B02; }
+.hero { position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; background: #170B02; }
 .hero__video { position: absolute; top: 0; right: 0; height: 100%; width: auto; max-width: 100%; object-fit: cover; object-position: center; z-index: 0; }
 .hero__scrim { position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
@@ -134,7 +134,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: var(--weight-bold); li
 }
 
 /* ---------------- BRAND NARRATIVE ---------------- */
-.about { position: relative; min-height: 100vh; overflow: hidden; color: var(--cream-100); display: flex; align-items: center;
+.about { position: relative; height: 100vh; overflow: hidden; color: var(--cream-100); display: flex; align-items: center;
   background: radial-gradient(120% 110% at 16% 40%, #241408, #1A0D03 60%, #170B02); }
 .about__photo { position: absolute; right: clamp(-6%, -2vw, 0%); bottom: 0; height: 100vh; width: auto; max-width: 60%;
   object-fit: contain; object-position: bottom right; z-index: 1; filter: drop-shadow(0 30px 60px rgba(0,0,0,.45)); }
@@ -154,7 +154,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: var(--weight-bold); li
 }
 
 /* ---------------- ESSENCE INTRO (full-screen video) ---------------- */
-.essence { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+.essence { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center;
   overflow: hidden; background: #2A1A11; }
 .essence__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
   filter: blur(34px) brightness(.62) saturate(1.05); transform: scale(1.12); }
@@ -174,7 +174,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: var(--weight-bold); li
 }
 
 /* ---------------- KOLEKSI VARIAN — halaman per varian ---------------- */
-.vpage { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; background: var(--cream-200); }
+.vpage { position: relative; height: 100vh; display: flex; align-items: center; overflow: hidden; background: var(--cream-200); }
 .hpanel__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center right; z-index: 0; }
 .vpage::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(90deg, rgba(250,244,236,.94) 0%, rgba(250,244,236,.64) 28%, rgba(250,244,236,.12) 52%, rgba(250,244,236,0) 66%); }
@@ -243,7 +243,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: var(--weight-bold); li
 .card__detail { font-family: var(--font-sans); font-size: var(--text-2xs); font-weight: 600; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--gold-700); }
 
 /* ---------------- LUX TRAVEL SIZE ---------------- */
-.travel { position: relative; overflow: hidden; padding: 0; min-height: 100vh;
+.travel { position: relative; overflow: hidden; padding: 0; height: 100vh;
   background: radial-gradient(115% 110% at 24% 45%, #FFFFFF 0%, #FCF7F0 42%, #F3ECF7 100%); }
 .travel__grid { width: 100%; max-width: none; margin: 0; display: grid;
   grid-template-columns: 1fr 1fr; align-items: stretch; gap: 0; min-height: 100vh; }
