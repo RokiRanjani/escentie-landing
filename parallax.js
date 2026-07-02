@@ -157,7 +157,12 @@
     a.addEventListener("click", function (ev) {
       var id = a.getAttribute("href"); if (id.length < 2) return;
       var t = document.querySelector(id);
-      if (t) { ev.preventDefault(); t.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); }
+      if (t) {
+        ev.preventDefault();
+        // plain x/y form: CSS scroll-behavior handles smoothness (and reduced-motion);
+        // older browsers without ScrollToOptions still jump correctly.
+        window.scrollTo(0, t.getBoundingClientRect().top + window.scrollY);
+      }
     });
   });
 
