@@ -5,7 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Escentie — Bold Statement, Radiant Presence</title>
 <meta name="description" content="Escentie — rumah parfum artisanal Indonesia. Empat varian eau de parfum: Vanilla Day One, Serenity, Zephyr, dan Social Nectra." />
-<link rel="icon" href="assets/mark-e.png" />
+<!-- Link preview saat dibagikan di WhatsApp / Instagram / dll. -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Escentie" />
+<meta property="og:title" content="Escentie — Bold Statement, Radiant Presence" />
+<meta property="og:description" content="Rumah parfum artisanal Indonesia. Empat varian eau de parfum: Vanilla Day One, Serenity, Zephyr, dan Social Nectra." />
+<meta property="og:url" content="https://escentie.vercel.app/" />
+<meta property="og:image" content="https://escentie.vercel.app/assets/collection-still.jpeg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="assets/favicon.png" />
+<link rel="preload" as="image" href="assets/poster-hero-spray.jpg" />
+<link rel="preload" as="image" href="assets/logo-emas-sm.png" />
 <link rel="stylesheet" href="site.css" />
 </head>
 <body>
@@ -32,14 +42,14 @@
 
   <!-- ============ 01 · HERO (video) ============ -->
   <section class="hero" id="hero" data-dark data-screen-label="01 Hero">
-    <video class="hero__video" id="heroVideo" muted loop playsinline autoplay preload="auto">
+    <video class="hero__video" id="heroVideo" muted loop playsinline autoplay preload="auto" poster="assets/poster-hero-spray.jpg">
       <source src="assets/hero-spray.mp4" type="video/mp4" />
     </video>
     <div class="hero__scrim"></div>
     <div class="hero__inner hero__inner--video">
       <p class="eyebrow on-dark hero__eyebrow reveal">Parfum Artisanal</p>
       <span class="hero__logoWrap reveal" data-delay="1">
-        <img class="hero__logo" src="assets/logo-emas.png" alt="Escentie" style="filter: drop-shadow(0 8px 22px rgba(0,0,0,.5)) drop-shadow(0 0 28px rgba(207,162,63,.55));" />
+        <img class="hero__logo" fetchpriority="high" src="assets/logo-emas-sm.png" alt="Escentie" style="filter: drop-shadow(0 8px 22px rgba(0,0,0,.5)) drop-shadow(0 0 28px rgba(207,162,63,.55));" />
       </span>
       <p class="hero__tagline hero__tagline--video reveal" data-delay="2" data-tagline>Bold Statement, Radiant Presence.</p>
       <p class="hero__sub hero__sub--video reveal" data-delay="3">Rumah parfum artisanal. Diracik dengan tangan — sebuah aroma yang berbicara untukmu, sebelum sepatah kata terucap.</p>
@@ -52,21 +62,21 @@
 
   <!-- ============ 02 · TENTANG ESCENTIE ============ -->
   <section class="about" id="about" data-dark data-screen-label="02 Tentang Escentie">
-    <img class="about__photo" data-parallax="0.08" src="assets/model-renit-5.webp" alt="Model Escentie memegang parfum Vanilla Day One" />
+    <img class="about__photo" decoding="async" data-parallax="0.08" src="assets/model-renit-5.webp" alt="Model Escentie memegang parfum Vanilla Day One" />
     <div class="about__veil"></div>
     <div class="about__inner">
       <p class="eyebrow reveal">Tentang Escentie</p>
       <h2 class="about__title reveal" data-delay="1">Aroma adalah cara paling jujur untuk hadir.</h2>
       <p class="about__body reveal" data-delay="2">Escentie lahir dari keyakinan bahwa setiap spray memancarkan keanggunan modern. Bukan lagi hanya sekadar parfum, melainkan sebuah pernyataan ketegasan siapa dirimu sebenarnya.</p>
-      <p class="about__sign reveal" data-delay="3"><img src="assets/monogram.webp" alt="" />Your Signature Scent.</p>
+      <p class="about__sign reveal" data-delay="3"><img loading="lazy" decoding="async" src="assets/monogram.webp" alt="" />Your Signature Scent.</p>
     </div>
   </section>
 
   <!-- ============ 03 · THE ESSENCE COLLECTION ============ -->
   <section class="essence" id="collection" data-screen-label="03 The Essence Collection">
-    <img class="essence__bg" src="assets/collection-still.jpeg" alt="" aria-hidden="true" />
+    <img loading="lazy" decoding="async" class="essence__bg" src="assets/collection-still.jpeg" alt="" aria-hidden="true" />
     <div class="essence__bgveil"></div>
-    <img class="essence__photo" src="assets/collection-still.jpeg" alt="Empat varian Escentie berjajar di atas marmer" />
+    <img loading="lazy" decoding="async" class="essence__photo" src="assets/collection-still.jpeg" alt="Empat varian Escentie berjajar di atas marmer" />
     <div class="essence__overlay">
       <h2 class="essence__title reveal">The Essence Collection</h2>
       <p class="essence__sub reveal" data-delay="1">Empat varian untuk semua acara.</p>
@@ -75,16 +85,16 @@
 
   <!-- ============ 03B · KOLEKSI VARIAN (halaman per varian) ============ -->
   <section class="vpage" id="cat-vanilla" data-screen-label="03B Vanilla Day One">
-    <video class="hpanel__img" src="assets/vanilla-loop.mp4" poster="assets/catalog-vanilla.jpg" autoplay muted loop playsinline aria-label="Vanilla Day One — botol parfum"></video>
+    <video class="hpanel__img" src="assets/vanilla-loop.mp4" poster="assets/poster-vanilla-loop.jpg" autoplay muted loop playsinline aria-label="Vanilla Day One — botol parfum"></video>
     <div class="hpanel__panel">
       <div class="poster__top">
         <h2 class="poster__name">Vanilla Day One</h2>
-        <img class="poster__logo" src="assets/logo-brown.png" alt="Escentié" />
-        <div class="poster__rule"><img src="assets/symbol-vanilla.png" alt="" /></div>
+        <img loading="lazy" decoding="async" class="poster__logo" src="assets/logo-brown.png" alt="Escentié" />
+        <div class="poster__rule"><img loading="lazy" decoding="async" src="assets/symbol-vanilla-sm.png" alt="" /></div>
         <p class="poster__notes">Bourbon Vanilla · White Florals · Orange</p>
       </div>
       <div class="poster__bottom">
-        <img class="poster__emblem" src="assets/symbol-vanilla.png" alt="" />
+        <img loading="lazy" decoding="async" class="poster__emblem" src="assets/symbol-vanilla-sm.png" alt="" />
         <p class="poster__statement">A gift from a<br />father.</p>
         <div class="poster__rule--plain"></div>
         <p class="poster__spec">Eau De Parfum<br />50 ml / 1.7 fl. oz</p>
@@ -94,16 +104,16 @@
   </section>
 
   <section class="vpage" id="cat-serenity" data-screen-label="03C Serenity">
-    <img class="hpanel__img" src="assets/catalog-serenity.jpg" alt="Serenity — botol parfum di tepi air dengan eukaliptus dan batu" />
+    <img loading="lazy" decoding="async" class="hpanel__img" src="assets/catalog-serenity.jpg" alt="Serenity — botol parfum di tepi air dengan eukaliptus dan batu" />
     <div class="hpanel__panel">
       <div class="poster__top">
         <h2 class="poster__name poster__name--solo">Serenity</h2>
-        <img class="poster__logo" src="assets/logo-brown.png" alt="Escentié" />
-        <div class="poster__rule"><img src="assets/emblem-jasmine-gold.png" alt="" /></div>
+        <img loading="lazy" decoding="async" class="poster__logo" src="assets/logo-brown.png" alt="Escentié" />
+        <div class="poster__rule"><img loading="lazy" decoding="async" src="assets/emblem-jasmine-gold-sm.png" alt="" /></div>
         <p class="poster__notes">Jasmine · Neroli · Morning Dew</p>
       </div>
       <div class="poster__bottom">
-        <img class="poster__emblem" src="assets/emblem-jasmine-gold.png" alt="" />
+        <img loading="lazy" decoding="async" class="poster__emblem" src="assets/emblem-jasmine-gold-sm.png" alt="" />
         <p class="poster__statement">A whisper of nature,<br />a breath of elegance.</p>
         <div class="poster__rule--plain"></div>
         <p class="poster__spec">Eau De Parfum<br />50 ml / 1.7 fl. oz</p>
@@ -113,16 +123,16 @@
   </section>
 
   <section class="vpage" id="cat-zephyr" data-screen-label="03D Zephyr">
-    <img class="hpanel__img" src="assets/catalog-zephyr.jpg" alt="Zephyr — botol parfum di marmer dengan jeruk dan tirai" />
+    <img loading="lazy" decoding="async" class="hpanel__img" src="assets/catalog-zephyr.jpg" alt="Zephyr — botol parfum di marmer dengan jeruk dan tirai" />
     <div class="hpanel__panel">
       <div class="poster__top">
         <h2 class="poster__name poster__name--solo">Zephyr</h2>
-        <img class="poster__logo" src="assets/logo-brown.png" alt="Escentié" />
-        <div class="poster__rule"><img src="assets/emblem-citrus-gold.png" alt="" /></div>
+        <img loading="lazy" decoding="async" class="poster__logo" src="assets/logo-brown.png" alt="Escentié" />
+        <div class="poster__rule"><img loading="lazy" decoding="async" src="assets/emblem-citrus-gold-sm.png" alt="" /></div>
         <p class="poster__notes">Calabrian Bergamot · Citrus · Breeze</p>
       </div>
       <div class="poster__bottom">
-        <img class="poster__emblem" src="assets/emblem-citrus-gold.png" alt="" />
+        <img loading="lazy" decoding="async" class="poster__emblem" src="assets/emblem-citrus-gold-sm.png" alt="" />
         <p class="poster__statement">Invigorating energy for<br />active wear.</p>
         <div class="poster__rule--plain"></div>
         <p class="poster__spec">Eau De Parfum<br />50 ml / 1.7 fl. oz</p>
@@ -132,16 +142,16 @@
   </section>
 
   <section class="vpage" id="cat-social" data-screen-label="03E Social Nectra">
-    <img class="hpanel__img" src="assets/catalog-social.jpg" alt="Social Nectra — botol parfum dengan nanas, bunga, dan madu" />
+    <img loading="lazy" decoding="async" class="hpanel__img" src="assets/catalog-social.jpg" alt="Social Nectra — botol parfum dengan nanas, bunga, dan madu" />
     <div class="hpanel__panel">
       <div class="poster__top">
         <h2 class="poster__name poster__name--caps">Social<br />Nectra</h2>
-        <img class="poster__logo" src="assets/logo-brown.png" alt="Escentié" />
-        <div class="poster__rule"><img src="assets/emblem-pineapple.png" alt="" /></div>
+        <img loading="lazy" decoding="async" class="poster__logo" src="assets/logo-brown.png" alt="Escentié" />
+        <div class="poster__rule"><img loading="lazy" decoding="async" src="assets/emblem-pineapple-sm.png" alt="" /></div>
         <p class="poster__notes">Golden Nectar · Neroli · Pineapple</p>
       </div>
       <div class="poster__bottom">
-        <img class="poster__emblem" src="assets/emblem-pineapple.png" alt="" />
+        <img loading="lazy" decoding="async" class="poster__emblem" src="assets/emblem-pineapple-sm.png" alt="" />
         <p class="poster__statement">Joy of doing things<br />together with friends.</p>
         <div class="poster__rule--plain"></div>
         <p class="poster__spec">Eau De Parfum<br />50 ml / 1.7 fl. oz</p>
@@ -165,7 +175,7 @@
           data-reel="https://www.instagram.com/reel/DaApRq5pQIv/"
           data-narrative="&quot;Vanilla&quot; bagi saya bukan sekadar aroma kue, melainkan nama putri kecil saya. Ide ini muncul saat ia lahir — momen penuh kebahagiaan yang membuat saya spontan bertanya, &quot;Kado apa yang paling spesial untuknya?&quot;||Jujur, awalnya saya bukan ahli parfum. Saya hanya penikmat yang punya puluhan decant di kamar. Tapi suatu hari saya berucap kepada istri, &quot;Yang, aku ingin buatkan parfum buat hadiah Vanilla.&quot; Dengan gaji saya sebagai guru, saya mencicil bahan satu per satu — belajar karakter tiap bahan, dari Bergamot hingga White Florals.||Prosesnya penuh trial and error, 300 kali percobaan. Karena Vanilla anak perempuan, parfumnya harus sangat lembut, tidak boleh kasar. Saya ingin menggambarkan kelembutan bayi lewat perpaduan White Florals dan Vanilla. Tantangan terbesarnya ada pada dry down — saya tidak ingin anak saya diidentikkan dengan aroma bolu. Lucunya, formulasi terbaik justru lahir dari sebuah ketidaksengajaan saat bereksperimen.||Akhirnya lahirlah versi yang sekarang: lembut, sopan di hidung, menenangkan — seperti berada di kebun Vanilla yang bersih dengan semilir angin dan bunga-bunga berjatuhan. Vanilla kini baru berusia 3 bulan, dan parfum ini akan saya berikan kepadanya saat ia berusia 5 tahun nanti. Hadiah kecil dari Ayah.">
           <div class="card__photo">
-            <video class="card__video" src="assets/var-vanilla.mp4" muted loop playsinline preload="metadata" aria-label="Vanilla Day One"></video>
+            <video class="card__video" src="assets/var-vanilla.mp4" poster="assets/poster-var-vanilla.jpg" muted loop playsinline preload="metadata" aria-label="Vanilla Day One"></video>
             <span class="card__view">Sumber Inspirasi</span>
           </div>
           <h3 class="card__name">Vanilla Day One</h3>
@@ -191,7 +201,7 @@
           data-reel="https://www.instagram.com/reel/DaEVFq7TgT4/"
           data-narrative="Serenity terinspirasi dari suasana kebun teh di Lembang. Waktu itu saya sekeluarga melewati jalan berkelok-kelok menuju puncak, lalu berhenti di satu titik — terpukau pemandangan kebun teh yang bergulung sejauh mata memandang.||Udaranya sangat sejuk, tidak seperti di kota tempat saya bekerja. Saya berjalan di atas jembatan kayu, merenung, sejenak melupakan hiruk pikuk angin perkotaan. Yang saya ingat, tiap napas memberi ketenangan — seolah oksigen punya aroma. Itulah yang ingin saya tangkap dalam Serenity: ingatan ketika saya akhirnya menemukan diri saya kembali.||Serenity bukanlah pelarian dari kenyataan. Esensinya adalah berhenti sejenak untuk merenungi apa yang sebenarnya terjadi, dan menemukan ketenangan di dalam diri sendiri. Dan sejujurnya, mungkin itulah yang sebenarnya kita butuhkan.">
           <div class="card__photo">
-            <video class="card__video" src="assets/var-serenity.mp4" muted loop playsinline preload="metadata" aria-label="Serenity"></video>
+            <video class="card__video" src="assets/var-serenity.mp4" poster="assets/poster-var-serenity.jpg" muted loop playsinline preload="metadata" aria-label="Serenity"></video>
             <span class="card__view">Sumber Inspirasi</span>
           </div>
           <h3 class="card__name">Serenity</h3>
@@ -217,7 +227,7 @@
           data-reel="https://www.instagram.com/reel/DaIKuwkxHHw/"
           data-narrative="Zephyr itu tentang kamu yang suka tantangan. Kalau kamu orang yang energik dan suka berkegiatan outdoor, coba deh Zephyr. Ibarat kapal layar, Zephyr adalah angin yang menggerakkan — aromanya memberi energi untuk aktivitas outdoor dan mendorongmu sampai ke tujuan akhir.||Ini bukan parfum khusus laki-laki. Jaman sekarang perempuan juga strong, tidak kalah. Coba lihat — yang naik gunung bukan cuma cowok; perempuan-perempuan juga nanjak sampai puncak. Intinya, untuk siapa pun, laki-laki atau perempuan, yang energinya banyak dan suka tantangan, Zephyr cocok menemani kegiatanmu.||Aromanya didesain untuk memberi energi terutama saat kamu bergerak aktif, dengan sensasi sedikit pedas yang muncul untuk memompa semangatmu berlari lebih cepat. Semakin bergerak, semakin aromanya menyebar.">
           <div class="card__photo">
-            <video class="card__video" src="assets/var-zephyr.mp4" muted loop playsinline preload="metadata" aria-label="Zephyr"></video>
+            <video class="card__video" src="assets/var-zephyr.mp4" poster="assets/poster-var-zephyr.jpg" muted loop playsinline preload="metadata" aria-label="Zephyr"></video>
             <span class="card__view">Sumber Inspirasi</span>
           </div>
           <h3 class="card__name">Zephyr</h3>
@@ -243,7 +253,7 @@
           data-reel="https://www.instagram.com/reel/DaKz-Vsv4d7/"
           data-narrative="Parfum ini terinspirasi dari kebiasaan kita duduk bersama teman-teman — bisa di kafe, angkringan, warung kopi, atau sekadar di teras rumah. Bagi saya, salah satu momen kebersamaan yang paling berkesan adalah saat kita berkumpul sambil memotong nanas.||Duduk bersama sambil mengulek gula aren dan menggerus garam. Begitu nanas dicelupkan — wah, bukan cuma perut yang kenyang, rasanya jiwa ini ikut tersenyum. Momen seperti inilah yang membuat saya bersyukur lahir di Indonesia: alamnya melimpah, orang-orangnya penuh jiwa sosial. Ngerujak itu bukan sekadar memotong buah; di sana ada 'transaksi' informasi hingga negosiasi antar teman. Tua atau muda, ngerujak itu universal.||Sadar nggak sih kalau nanas madu sudah jadi fenomena tersendiri? Di pasar ada, di CFD ada, di Lembang ada, bahkan di pinggir jalan pun ada. Walaupun kulit luarnya kasar dan berduri, nanas adalah pembawa kegembiraan. Karakter aromanya yang fresh, bright, dan manis merona selalu berhasil menghidupkan suasana. Does it contain dopamine? Maybe yes, in a liquid form.||Sebagai pekerja 9 to 5, kadang saya rindu masa-masa bisa duduk di belakang rumah, yapping seharian tanpa beban. Aroma ini diciptakan untuk merawat ingatan itu. Karena pada akhirnya, hidup bukan melulu tentang apa yang kita punya, tapi dengan siapa kita menikmatinya.">
           <div class="card__photo">
-            <video class="card__video" src="assets/var-social.mp4" muted loop playsinline preload="metadata" aria-label="Social Nectra"></video>
+            <video class="card__video" src="assets/var-social.mp4" poster="assets/poster-var-social.jpg" muted loop playsinline preload="metadata" aria-label="Social Nectra"></video>
             <span class="card__view">Sumber Inspirasi</span>
           </div>
           <h3 class="card__name">Social Nectra</h3>
@@ -269,14 +279,14 @@
         <h2 class="travel__title reveal" data-delay="1">Luxury, Wherever You Go</h2>
         <p class="travel__sub reveal" data-delay="2">Empat aroma untuk setiap perjalanan. Ramping, ringan, dan siap menemani ke mana pun langkahmu — kemewahan Escentie dalam ukuran mungil 10 ml.</p>
         <div class="travel__colors reveal" data-delay="3">
-          <figure><img src="assets/travel-ctx-lilac.jpeg" alt="Escentie Lux Travel Size lilac di kafe" /></figure>
-          <figure><img src="assets/travel-ctx-white.jpeg" alt="Escentie Lux Travel Size putih di Stasiun Yogyakarta" /></figure>
-          <figure><img src="assets/travel-ctx-yellow.jpeg" alt="Escentie Lux Travel Size kuning di tengah kota" /></figure>
+          <figure><img loading="lazy" decoding="async" src="assets/travel-ctx-lilac.jpeg" alt="Escentie Lux Travel Size lilac di kafe" /></figure>
+          <figure><img loading="lazy" decoding="async" src="assets/travel-ctx-white.jpeg" alt="Escentie Lux Travel Size putih di Stasiun Yogyakarta" /></figure>
+          <figure><img loading="lazy" decoding="async" src="assets/travel-ctx-yellow.jpeg" alt="Escentie Lux Travel Size kuning di tengah kota" /></figure>
         </div>
         <p class="travel__note reveal" data-delay="3">Tersedia dalam warna-warna playful — punyamu bisa jadi kejutan! Punya warna favorit? DM kami 💜</p>
       </div>
       <figure class="travel__media travel__media--full reveal">
-        <img src="assets/travel-model-new.webp" alt="Model Escentie memegang Lux Travel Size lilac" />
+        <img loading="lazy" decoding="async" src="assets/travel-model-new.webp" alt="Model Escentie memegang Lux Travel Size lilac" />
       </figure>
     </div>
   </section>
@@ -285,7 +295,7 @@
   <section class="editorial" id="editorial" data-dark data-screen-label="06 Aroma">
     <div class="editorial__inner">
       <div class="editorial__media reveal">
-        <img class="editorial__model" data-parallax="0.16" src="assets/model-vido-6.webp" alt="Model pria mengenakan batik berjalan membawa parfum Escentie" />
+        <img loading="lazy" decoding="async" class="editorial__model" data-parallax="0.16" src="assets/model-vido-6.webp" alt="Model pria mengenakan batik berjalan membawa parfum Escentie" />
       </div>
       <div class="editorial__copy reveal" data-delay="2">
         <p class="eyebrow">Aroma Yang Hidup</p>
@@ -304,7 +314,7 @@
   <!-- ============ 07 · PENUTUP ============ -->
   <section class="closing" id="closing" data-screen-label="07 Penutup">
     <div class="wrap">
-      <img class="closing__monogram reveal" src="assets/monogram.webp" alt="" />
+      <img class="closing__monogram reveal" loading="lazy" decoding="async" src="assets/monogram.webp" alt="" />
       <p class="eyebrow reveal" data-delay="1">Dear you,</p>
       <h2 class="reveal" data-delay="2">TEMUKAN BOTOL KARAKTERMU</h2>
       <p class="reveal" data-delay="3">Aroma yang menemani keseharian kamu. Semoga harimu sewangi parfum ini.</p>
@@ -313,7 +323,7 @@
         <a class="btn btn-ghost" href="#about">Pelajari Cerita</a>
       </div>
       <a class="closing__qr reveal" data-delay="4" href="https://linktr.ee/Escentie_Parfum" target="_blank" rel="noopener">
-        <img src="assets/qr-linktree.png" alt="QR Linktree Escentie" />
+        <img loading="lazy" decoding="async" src="assets/qr-linktree.png" alt="QR Linktree Escentie" />
         <span class="closing__qrtext">
           <span class="closing__qrlabel">Pindai Saya</span>
           <span class="closing__qrlink">linktr.ee/Escentie_Parfum</span>
@@ -328,7 +338,7 @@
     <div class="wrap">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="assets/logo-gold.png" alt="Escentie" />
+          <img loading="lazy" decoding="async" src="assets/logo-gold.png" alt="Escentie" />
           <p>Bold Statement,<br />Radiant Presence.</p>
         </div>
         <div class="footer__col">

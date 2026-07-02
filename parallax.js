@@ -86,6 +86,20 @@
     else { cardVideos.forEach(function (v) { if (v._inview) playVid(v); }); schedule(); }
   });
 
+  /* ---- autoplay fallback: some browsers (Low Power Mode, Data Saver) block
+     autoplay until the user interacts. Retry all in-view videos on first touch/click. ---- */
+  function kickVideos() {
+    document.querySelectorAll("video[muted], video[autoplay]").forEach(function (v) {
+      v.muted = true;
+      var r = v.getBoundingClientRect();
+      var inView = r.bottom > 0 && r.top < window.innerHeight;
+      if (inView && v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    });
+  }
+  ["touchstart", "click"].forEach(function (evName) {
+    window.addEventListener(evName, kickVideos, { once: true, passive: true });
+  });
+
   /* ---- variant modal ---- */
   var modal = document.getElementById("variantModal");
   var mEls = modal ? {
