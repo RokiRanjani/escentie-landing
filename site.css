@@ -283,7 +283,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: var(--weight-bold); li
 .modal.open .modal__card { transform: none; opacity: 1; }
 .modal__media { position: relative; background: radial-gradient(120% 100% at 50% 30%, var(--cream-100), var(--cream-300)); }
 .modal__media img, .modal__media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.modal__body { padding: clamp(2rem, 4vw, 3.2rem); overflow-y: auto; min-height: 0; max-height: 90vh; }
+.modal__body { padding: clamp(2rem, 4vw, 3.2rem); overflow-y: auto; min-height: 0; max-height: 90vh; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .modal__notes { margin-bottom: 1rem; }
 .modal__name { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
 .modal__tag { font-family: var(--font-serif); font-style: italic; color: var(--text-accent); font-size: var(--text-lg); margin: .5rem 0 1.4rem; }
@@ -305,7 +305,11 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: var(--weight-bold); li
   text-transform: uppercase; color: var(--gold-700); text-decoration: none; transition: color .24s ease; }
 .modal__reel:hover { color: var(--gold-600); }
 .modal__reel svg { flex: none; }
-@media (max-width: 720px){ .modal__card { grid-template-columns: 1fr; max-height: 88vh; } .modal__media { height: 38vh; } .modal__media img, .modal__media video { position: relative; } }
+@media (max-width: 720px){
+  .modal__card { grid-template-columns: 1fr; grid-template-rows: 36vh minmax(0, 1fr); max-height: 88vh; max-height: 90dvh; }
+  .modal__media { height: auto; }
+  .modal__body { max-height: none; }
+}
 
 /* ---------------- EDITORIAL + JANJI ---------------- */
 .editorial { position: relative; overflow: hidden;
